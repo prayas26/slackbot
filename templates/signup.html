@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=10" /><![endif]-->
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Wiki Bot</title>
+    <link href="include/css/main.css" rel='stylesheet' type='text/css'>
+    <link href="include/fonts/font/stylesheet.css" rel='stylesheet' type='text/css'>
+    <link href="include/fonts/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <section class="login-section flex-wrap">
+
+        <div class="form-wrap">
+            <h2>Sign Up</h2>
+            <h4 align="center">Please login to your Confluence Wiki and add the username and Email id of Wikibot as a user.</h4>
+
+            <form class="login-form" action="http://127.0.0.1:5000/signup" method="POST">
+                <div class="container-login">
+                    <label><b>First Name</b></label>
+                    <input type="text" placeholder="" name="firstname" required>
+                    
+                    <label><b>Last Name</b></label>
+                    <input type="text" placeholder="" name="lastname" required>
+                    
+                    <label><b>E-mail ID</b></label>
+                    <input type="text" placeholder="" name="eid" required>
+                    
+                    <label><b>URL</b></label>
+                    <input type="text" placeholder="" name="url" required>
+                    
+                    <label><b>Space Key</b></label>
+                    <input type="text" placeholder="" name="spacekey" required>
+
+                    <button type="submit" class="submit-button">Generate Token</button>
+
+                </div>
+
+
+            </form>
+        </div>
+
+    </section>
+
+    <script src="include/js/jquery.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        $(document).click(function (event) {
+            var clickover = $(".icon");
+            if ($("#myTopnav").hasClass("responsive") && !clickover.hasClass("responsive")) {
+                $('.icon').addClass("responsive");
+            } else {
+                $(".topnav, .icon").removeClass("responsive");
+            }
+        });
+    </script>
+</body>
+
+</html>

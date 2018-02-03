@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=10" /><![endif]-->
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Wiki Bot</title>
+    <link href="include/css/main.css" rel='stylesheet' type='text/css'>
+    <link href="include/fonts/font/stylesheet.css" rel='stylesheet' type='text/css'>
+    <link href="include/fonts/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <section class="login-section flex-wrap">
+
+        <div class="form-wrap">
+            <h2>Confluence Wiki Link</h2>
+
+            <form class="login-form" action="http://127.0.0.1:5000/login" method="POST">
+                <div class="container-login">
+                    <label><b>Confluence Wiki Link</b></label>
+                    <input type="url" placeholder="" name="url" required>
+
+                    <label><b>Spacekey</b></label>
+                    <input type="text" placeholder="" name="spacekey" required>
+                    <button type="submit" class="submit-button">Login</button>
+                    <a href="http://127.0.0.1:5000/forgot"><button class="submit-button">Forgot Password</button></a>
+
+
+                </div>
+
+
+            </form>
+        </div>
+
+    </section>
+
+    <script src="include/js/jquery.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        $(document).click(function (event) {
+            var clickover = $(".icon");
+            if ($("#myTopnav").hasClass("responsive") && !clickover.hasClass("responsive")) {
+                $('.icon').addClass("responsive");
+            } else {
+                $(".topnav, .icon").removeClass("responsive");
+            }
+        });
+    </script>
+</body>
+
+</html>
