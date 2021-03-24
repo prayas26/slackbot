@@ -32,7 +32,7 @@ PythonConfluenceAPI==0.0.1rc6
 PyYAML==3.12
 requests==2.18.1
 requests-futures==0.9.7
-rsa==3.4.2
+rsa==4.1
 s3transfer==0.1.10
 six==1.10.0
 slackclient==1.0.6
